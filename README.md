@@ -40,8 +40,9 @@ This file is used to compute the averages $E[(e(t)-24)^{12}]$
 in the generic place and on hyperplanes, as well as computing 
 the list of exceptional hyperplanes, as well as the 266743 
 exceptional lines. Running times are indicated in the file.
-The longest computation is computing the 6338 hyperplane integrals
-(these are just sums of finitely many integers). 
+
+Running Time: 20 minutes to compute the hyperplane integrals,
+5 minutes for generating the list of exceptional lines.
 
 - BadLines.nb
 
