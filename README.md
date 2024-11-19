@@ -24,7 +24,7 @@ Running time: 267 hours. (Also executed in parallel on
 - cross.out
 - crossstrict.out
 
-The file cross verifies the 5-Lemma for the 266743 triples in the 
+The file cross verifies Theorem D for the 266743 triples in the 
 codimension 2 case. 
 
 The file crossstrict verifies the stronger version of the 5-Lemma on
