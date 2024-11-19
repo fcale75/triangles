@@ -34,6 +34,19 @@ Both of these use the same data file datacross.
 
 Running Time: 70 seconds and 76 seconds respectively.
 
+- ComputingMoments.nb
+
+This file is used to compute the averages $E[(e(t)-24)^{12}]$
+in the generic place and on hyperplanes, as well as computing 
+the list of exceptional hyperplanes, as well as the 266743 
+exceptional lines. Running times are indicated in the file.
+The longest computation is computing the 6338 hyperplane integrals
+(these are just sums of finitely many integers). 
+
+- BadLines.nb
+
+This file computes the lines of small height on the exceptional hyperplanes.
+
 ### Codimension 1 case
 
 - badlines
