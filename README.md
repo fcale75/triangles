@@ -3,7 +3,7 @@
 All files are written in magma unless they have the form file.nb, in 
 which case they are mathematica files.
 
-## Proof that $\mathrm{min}(p,q,r) \ge B$ for various $B$
+## Proof that $\mathrm{min}(p,q,r) \ge B$ for various B
 - 33bound
 - 885bound
 - 33bound.out
@@ -15,7 +15,7 @@ for n = 1..33 and n= 34..885 respectively.
 Running time: 267 hours. (Also executed in parallel on
 100 cores.)
 
-## Proof of the 5-Lemma
+## Proof of Theorem D
 ### Codimension two case
 
 - cross
