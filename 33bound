@@ -1,0 +1,79 @@
+RC := function(n)
+    repeat
+        x := Random([-n..n]);
+        if GCD(x, n) eq 1 then
+            return x;
+        end if;
+    until false;
+end function;
+
+master:=[];
+
+dist := function(a,b,c)
+	d:=0;
+	aa:=Round(a); aaa:=a-aa;
+	bb:=Round(b); bbb:=b-bb;
+	cc:=Round(c); ccc:=c-cc;
+	if ((aa + bb + cc) mod 2) eq 0 then
+		d:=AbsoluteValue(aaa) + AbsoluteValue(bbb) + AbsoluteValue(ccc);
+		end if;
+	if d eq 0 then
+		vec:=[Abs(aaa),Abs(bbb),Abs(ccc)];
+		e,f:=Maximum(vec);
+		d:=Abs(aaa)+Abs(bbb)+Abs(ccc) + 1 - 2*e;
+		end if;
+	return(d);
+end function;
+
+Q:=Rationals();
+
+for p in [2..33] do
+	for b in [1..15*p] do
+		for a in [1..b] do
+			if GCD(a,b) eq 1 then
+				bound:=276*p*(a+b) div (a*b);
+				[p,a,b,bound];
+				for d in [1..bound] do
+					q:=a*d;
+					r:=b*d;
+					n:=LCM([2,p,q,r]);
+					m:=Min([p,q,r]);
+					moretesting:=0;
+					if m ge 2 then
+					for l in [1..100] do
+						if moretesting eq 0 then
+							k:=RC(n);
+							if dist(k/p,k/q,k/r) ge 1 then
+								moretesting:=1;
+								end if;
+							end if;
+						end for;
+					if moretesting eq 0 then
+						if [1/p,1/q,1/r] notin master then
+							print("new example");
+							[1/p,1/q,1/r];
+							master:=Append(master,[1/p,1/q,1/r]);
+							master;
+							end if;
+						end if;
+					end if;;
+					end for;
+				end if;
+			end for;
+		end for;
+	end for;
+
+
+
+
+
+
+				
+	
+
+
+
+
+
+
+

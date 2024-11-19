@@ -1,0 +1,25 @@
+Magma V2.23-9     Mon Nov  4 2024 20:25:14 on hegel    [Seed = 2716812467]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+[ 15, 20 ]
+[ 27, 36 ]
+[ 36, 48 ]
+[ 45, 60 ]
+[ 48, 64 ]
+[ 60, 80 ]
+[ 24, 60 ]
+[ 38, 95 ]
+[ 28, 35 ]
+[ 48, 60 ]
+
+Total time: 7.410 seconds, Total memory usage: 32.09MB

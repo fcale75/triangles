@@ -1,0 +1,76 @@
+Q:=Rationals();
+
+RC := function(n)
+        x := Random([-1000*n..1000*n]);
+            return (Q!x)/1000;
+end function;
+
+master:=[];
+
+dist := function(a,b,c)
+	d:=0;
+	aa:=Round(a); aaa:=a-aa;
+	bb:=Round(b); bbb:=b-bb;
+	cc:=Round(c); ccc:=c-cc;
+	if ((aa + bb + cc) mod 2) eq 0 then
+		d:=AbsoluteValue(aaa) + AbsoluteValue(bbb) + AbsoluteValue(ccc);
+		end if;
+	if d eq 0 then
+		vec:=[Abs(aaa),Abs(bbb),Abs(ccc)];
+		e,f:=Maximum(vec);
+		d:=Abs(aaa)+Abs(bbb)+Abs(ccc) + 1 - 2*e;
+		end if;
+	return(d);
+end function;
+
+load "databadlinesstrict";
+
+#badlines;
+
+for L in badlines do;
+a:=L[1];
+b:=L[2];
+c:=L[3];
+p:=(b*c);
+q:=(a*c);
+r:=(a*b);
+h:=GCD([p,q,r]);
+if h ne 0 then
+p:=p div h;
+q:=q div h;
+r:=r div h;
+if p*q*r ne 0 then
+nn:=LCM([2,p,q,r]);
+	moretesting:=0;
+	for l in [1..1000] do
+		if moretesting eq 0 then
+			k:=RC(nn);
+			if dist(k/p,k/q,k/r) ge 29/24 then
+				moretesting:=1;
+				end if;
+			end if;
+		end for;
+	if moretesting eq 0 then
+		if Sort([1/p,1/q,1/r]) notin master then
+			print("new example");
+			Sort([1/p,1/q,1/r]);
+			master:=Append(master,Sort([1/p,1/q,1/r]));
+		end if;
+	end if;
+end if;
+end if;
+end for;
+
+
+
+
+
+				
+	
+
+
+
+
+
+
+

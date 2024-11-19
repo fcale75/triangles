@@ -1,0 +1,23 @@
+Magma V2.23-9     Sun Nov 17 2024 06:14:22 on hegel    [Seed = 2784697577]
+
++-------------------------------------------------------------------+
+|       This copy of Magma has been made available through a        |
+|                   generous initiative of the                      |
+|                                                                   |
+|                         Simons Foundation                         |
+|                                                                   |
+| covering U.S. Colleges, Universities, Nonprofit Research entities,|
+|               and their students, faculty, and staff              |
++-------------------------------------------------------------------+
+
+Type ? for help.  Type <Ctrl>-D to quit.
+Loading "databadlinesstrict"
+71244
+new example
+[ 1/6, 1/3, 1/2 ]
+new example
+[ 1/12, 1/4, 1/3 ]
+new example
+[ 1/6, 1/2, 1 ]
+
+Total time: 20.039 seconds, Total memory usage: 32.09MB

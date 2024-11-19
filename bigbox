@@ -1,0 +1,69 @@
+RC := function(n)
+    repeat
+        x := Random([-n..n]);
+        if GCD(x, n) eq 1 then
+            return x;
+        end if;
+    until false;
+end function;
+
+blist:=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21];
+bad:=[[1,2],[1,4],[2,3]];
+plist:=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,18,21,33];
+Q:=Rationals();
+
+for b in blist do
+	for a in [1..b] do
+		if GCD(a,b) eq 1 then
+			badtest:=0;
+			if [a,b] in bad then
+				badtest:=1;
+				end if;
+			if badtest eq 0 then
+				dbound:= 455 div a;
+				/* print("########################");
+                        	print("[a,b,d]=the pair [a,b] with bound for d");
+                        	[a,b,dbound]; */
+				for d in [1..dbound] do
+					p:=a*d; q:=b*d;
+					moretesting:=0;
+					for i in [1..1000] do
+						if moretesting eq 0 then
+							k:=Q!RC(2*a*b*d);
+							x:=1/2 + k/p;
+							y:=1/2 + k/q;
+							yy:=Abs(x - Round(x));
+							xx:=Abs(y - Round(y));
+							if 10*xx le 1 and 10*yy le 1 then
+								moretesting:=1;
+								end if;
+							end if;
+						end for;
+					if moretesting eq 0 then
+						if p notin plist then
+							if q notin plist then
+								[p,q];
+								end if;
+							end if;
+						end if;
+					end for;
+				end if;
+			end if;
+		end for;
+	 end for;
+
+
+
+
+
+
+
+				
+	
+
+
+
+
+
+
+

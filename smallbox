@@ -1,0 +1,61 @@
+RC := function(n)
+    repeat
+        x := Random([-n..n]);
+        if GCD(x, n) eq 1 then
+            return x;
+        end if;
+    until false;
+end function;
+
+pairs:=[[1, 1], [2, 1], [3, 1], [3, 2], [4, 1], [4, 3], [5, 1], 
+[5, 2], [5, 3], [5, 4], [6, 1], [6, 5], [7, 1], [7, 2], 
+[7, 3], [7, 4], [7, 5], [7, 6], [9, 1], [9, 2], [9, 4], 
+[9, 5], [9, 7]];
+Q:=Rationals();
+plist:=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,18,21,33];
+
+
+for v in pairs do
+	a:=v[2];
+	b:=v[1];
+	dbound:= 2450;
+	for d in [1..dbound] do
+		p:=a*d; q:=b*d;
+		moretesting:=0;
+		for i in [1..1000] do
+			if moretesting eq 0 then
+				k:=Q!RC(2*a*b*d);
+				x:=1/2 + k/p;
+				y:=1/2 + k/q;
+				yy:=Abs(x - Round(x));
+				xx:=Abs(y - Round(y));
+				if 14*xx le 3 and 14*yy le 3 then
+					moretesting:=1;
+					end if;
+				end if;
+			end for;
+		if moretesting eq 0 then
+			if p notin plist then
+				if q notin plist then
+					[p,q];
+					end if;
+				end if;
+			end if;
+		end for;
+	end for;
+
+
+
+
+
+
+
+				
+	
+
+
+
+
+
+
+
