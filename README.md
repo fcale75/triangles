@@ -1,6 +1,9 @@
-# magma and mathematica auxiliary files
+# Auxiliary files for the paper "Fields of definition for triangle groups"
 
-## Proof that min(p,q,r) >= B for various B:
+All files are written in magma unless they have the form file.nb, in 
+which case they are mathematica files.
+
+## Proof that $\mathrm{min}(p,q,r) \ge B$ for various $B$: 
 - 33bound
 - 885bound
 - 33bound.out
