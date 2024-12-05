@@ -1,4 +1,4 @@
-Magma V2.23-9     Sun Nov 17 2024 06:14:22 on hegel    [Seed = 2784697577]
+Magma V2.23-9     Thu Dec  5 2024 06:35:52 on hegel    [Seed = 2176284818]
 
 +-------------------------------------------------------------------+
 |       This copy of Magma has been made available through a        |
@@ -12,7 +12,7 @@ Magma V2.23-9     Sun Nov 17 2024 06:14:22 on hegel    [Seed = 2784697577]
 
 Type ? for help.  Type <Ctrl>-D to quit.
 Loading "databadlinesstrict"
-71244
+76450
 new example
 [ 1/6, 1/3, 1/2 ]
 new example
@@ -20,4 +20,4 @@ new example
 new example
 [ 1/6, 1/2, 1 ]
 
-Total time: 20.039 seconds, Total memory usage: 32.09MB
+Total time: 21.070 seconds, Total memory usage: 32.09MB
