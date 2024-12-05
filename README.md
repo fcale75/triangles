@@ -62,7 +62,8 @@ badlines verifies the 5-Lemma for the low height lines on the
 
 badlinesstrict verifies the stronger version with the stronger lower bound 1+5/24 > 1+1/5.
 
-There are two data files, since for the stronger lower bound the height bounds are slightly different.
+The original bound requires lower height bounds so needs fewer lines (only 52258), but its so quick that in practice we use the same data set (with the larger bound and all 76450 lines) in both cases.
+Originally these were done separately, but then for expositional reasons we made the parametrization of the hyperplanes simpler but slightly less efficient, and then in the second run we just used the single (larger) data set for both computations.
 
 
 Running Time: 20 seconds each.
